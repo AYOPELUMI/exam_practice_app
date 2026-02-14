@@ -1,8 +1,11 @@
-import { Search, Bell } from "lucide-react";
+"use client"
+
+import { Search, Bell, LogIn, UserPlus2Icon } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface HeaderProps {
   showSearch?: boolean;
@@ -11,6 +14,8 @@ interface HeaderProps {
 }
 
 export const Header = ({ showSearch = true, showAuth = false, userName = "Emma Okonkwo" }: HeaderProps) => {
+  const isMobile = useIsMobile();
+  console.log({ isMobile })
   return (
     <header className="h-16 border-b border-border bg-card px-6 flex items-center justify-between">
       <div className="flex items-center gap-8">
@@ -21,10 +26,10 @@ export const Header = ({ showSearch = true, showAuth = false, userName = "Emma O
       <div className="flex items-center gap-4">
         {showAuth ? (
           <>
-            <Button variant="default" size="xxl">Create account</Button>
+            <Button variant="default" size={isMobile ? "icon" : "xxl"}>{isMobile ? <UserPlus2Icon /> : "Create account"}</Button>
             <Link href={"/dashboard"}>
-              <Button variant="outline" size="xxl" className="text-2xl">
-                Log in</Button>
+              <Button variant="outline" size={isMobile ? "icon" : "xxl"} className="text-2xl">
+                {isMobile ? <LogIn /> : " Log in"}</Button>
             </Link>
           </>
         ) : (

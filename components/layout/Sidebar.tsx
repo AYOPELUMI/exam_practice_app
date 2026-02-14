@@ -123,7 +123,7 @@ export const Sidebar = () => {
           </Button>
 
           {/* Navigation */}
-          <nav className={cn("space-y-1 flex-1", isCollapsed && "items-center")}>
+          <nav className={cn("space-y-1 ", isCollapsed && "items-center")}>
             {navItems.map((item) => {
               const active = isActive(item.path);
               return (
@@ -163,7 +163,7 @@ export const Sidebar = () => {
           {/* Practice Button */}
           <Button
             className={cn(
-              "bg-primary hover:bg-primary/90 text-primary-foreground mt-auto",
+              " mt-14",
               isCollapsed && "px-3"
             )}
             asChild
