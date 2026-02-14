@@ -82,7 +82,7 @@ const scaleIn = {
 
 const Landing = () => {
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div className="min-h-screen bg-background overflow-x-hidden py-14">
       <Header showSearch={false} showAuth={true} />
 
       {/* Hero Section */}
