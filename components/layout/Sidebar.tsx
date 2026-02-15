@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 
 const navItems = [
   { icon: Home, label: "My Dashboard", path: "/dashboard" },
+  { icon: Home, label: "Admin Dashboard", path: "/admin" },
   { icon: Grid3X3, label: "Mock Exams", path: "/mock-exams" },
   { icon: Bot, label: "Study with AI", path: "/study-ai" },
   { icon: BarChart3, label: "Track Progress", path: "/progress" },

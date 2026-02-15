@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 
 const navItems = [
+    { icon: Home, label: "My Dashboard", path: "/dashboard" },
     { icon: Home, label: "Dashboard", path: "/admin" },
     { icon: LayoutGrid, label: "Questions", path: "/admin/questions" },
     { icon: Users, label: "Users", path: "/admin/users" },
